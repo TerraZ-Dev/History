@@ -10,7 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 using History.Commands;
-using Mono.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 using MySql.Data.MySqlClient;
 using Terraria;
 using Terraria.DataStructures;
@@ -19,7 +19,6 @@ using TerrariaApi.Server;
 using TShockAPI;
 using TShockAPI.DB;
 using Microsoft.Xna.Framework;
-using OTAPI.Tile;
 
 namespace History
 {
@@ -1657,8 +1656,7 @@ namespace History
 					};
 					break;
 				case "sqlite":
-					string sql = Path.Combine(TShock.SavePath, "history.sqlite");
-					Database = new SqliteConnection(string.Format("uri=file://{0},Version=3", sql));
+					Database = new SqliteConnection(("Data Source=" + Path.Combine(TShock.SavePath, "history.sqlite")));
 					break;
 			}
 			SqlTableCreator sqlcreator = new SqlTableCreator(Database,
