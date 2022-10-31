@@ -36,7 +36,7 @@ namespace History.Commands
                             {
 								var xy = (a.x << 16) + a.y; 
 								var direction = (a.direction ? 1 : -1);
-								command.CommandText = $"INSERT INTO History (Time, Account, Action, XY, Data, Style, Paint, WorldID, Text, Alternate, Random, Direction) VALUES ({a.time}, {a.account}, {a.action}, {xy}, {a.data}, {a.style}, {a.paint}, {Main.worldID}, {a.text}, {a.alt}, {a.random}, {direction})";
+								command.CommandText = $"INSERT INTO History (Time, Account, Action, XY, Data, Style, Paint, WorldID, Text, Alternate, Random, Direction) VALUES ({a.time}, '{a.account}', {a.action}, {xy}, {a.data}, {a.style}, {a.paint}, {Main.worldID}, '{a.text}', {a.alt}, {a.random}, {direction})";
 								command.ExecuteNonQuery();
 
 							}
@@ -58,7 +58,7 @@ namespace History.Commands
 							{
 								var xy = (a.x << 16) + a.y;
 								var direction = (a.direction ? 1 : -1);
-								command.CommandText = $"INSERT INTO History (Time, Account, Action, XY, Data, Style, Paint, WorldID, Text, Alternate, Random, Direction) VALUES ({a.time}, {a.account}, {a.action}, {xy}, {a.data}, {a.style}, {a.paint}, {Main.worldID}, {a.text}, {a.alt}, {a.random}, {direction})";
+								command.CommandText = $"INSERT INTO History (Time, Account, Action, XY, Data, Style, Paint, WorldID, Text, Alternate, Random, Direction) VALUES ({a.time}, '{a.account}', {a.action}, {xy}, {a.data}, {a.style}, {a.paint}, {Main.worldID}, '{a.text}', {a.alt}, {a.random}, {direction})";
 								command.ExecuteNonQuery();
 
 							}
