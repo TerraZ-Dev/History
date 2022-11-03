@@ -1641,6 +1641,7 @@ namespace History
 			TShockAPI.Commands.ChatCommands.Add(new Command("history.rollback", Rollback, "rollback"));
 			TShockAPI.Commands.ChatCommands.Add(new Command("history.rollback", Undo, "rundo"));
 
+			/*
 			switch (TShock.Config.Settings.StorageType.ToLower())
 			{
 				case "mysql":
@@ -1659,6 +1660,10 @@ namespace History
 					Database = new SqliteConnection(("Data Source=" + Path.Combine(TShock.SavePath, "history.sqlite")));
 					break;
 			}
+			*/
+			// TerraZ Update: (only sqlite)
+			Database = new SqliteConnection(("Data Source=" + Path.Combine(TShock.SavePath, "history.sqlite")));
+
 			SqlTableCreator sqlcreator = new SqlTableCreator(Database,
 				Database.GetSqlType() == SqlType.Sqlite ? (IQueryBuilder)new SqliteQueryCreator() : new MysqlQueryCreator());
 			sqlcreator.EnsureTableStructure(new SqlTable("History",
