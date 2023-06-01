@@ -828,10 +828,10 @@ namespace History
 			}
 		}
 
-		bool[] breakableBottom = new bool[Main.maxTileSets];
-		bool[] breakableTop = new bool[Main.maxTileSets];
-		bool[] breakableSides = new bool[Main.maxTileSets];
-		bool[] breakableWall = new bool[Main.maxTileSets];
+		bool[] breakableBottom = new bool[Terraria.ID.TileID.Count];
+		bool[] breakableTop = new bool[Terraria.ID.TileID.Count];
+		bool[] breakableSides = new bool[Terraria.ID.TileID.Count];
+		bool[] breakableWall = new bool[Terraria.ID.TileID.Count];
 		void initBreaks()
 		{
 			breakableBottom[4] = true;
