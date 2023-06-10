@@ -966,8 +966,7 @@ namespace History
 			breakableBottom[376] = true;
 			breakableBottom[377] = true;
 			breakableBottom[378] = true;
-			breakableBottom[380] = true;
-			breakableBottom[380] = true;
+			//breakableBottom[380] = true;
 			breakableBottom[388] = true;
 			breakableBottom[389] = true;
 			breakableBottom[390] = true;
@@ -999,7 +998,7 @@ namespace History
 			breakableTop[149] = true;
 			breakableTop[270] = true;
 			breakableTop[271] = true;
-			breakableTop[380] = true;
+			//breakableTop[380] = true;
 			breakableTop[388] = true;
 			breakableTop[389] = true;
 			breakableTop[395] = true;
@@ -1011,7 +1010,7 @@ namespace History
 			breakableSides[129] = true;
 			breakableSides[136] = true;
 			breakableSides[149] = true;
-			breakableSides[380] = true;
+			//breakableSides[380] = true;
 			breakableSides[386] = true;
 			breakableSides[387] = true;
 			breakableSides[395] = true;
@@ -1026,7 +1025,7 @@ namespace History
 			breakableWall[245] = true;
 			breakableWall[246] = true;
 			breakableWall[334] = true;
-			breakableWall[380] = true;
+			//breakableWall[380] = true;
 			breakableWall[395] = true;
 			breakableWall[440] = true;
 		}
